@@ -39,15 +39,38 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutines"
     
     implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
-    implementation "androidx.activity:activity-ktx:$rootProject.activityVersion"
+
 
     // UI
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
+    
+    //viewpager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    
+    // necessary for viewmodels()
+    implementation "androidx.activity:activity-ktx:$rootProject.activity_version"
+    implementation "androidx.fragment:fragment-ktx:$rootProject.fragment_version"
+    
+    implementation 'com.android.volley:volley:1.2.0'
 }
 
 // In build.gradle
 versions.work = "2.5.0"
+ext {
+fragment_version = '1.3.2'
+activity_version = '1.2.2'
+    appCompatVersion = '1.2.0'
+    constraintLayoutVersion = '2.0.2'
+    coreTestingVersion = '2.1.0'
+    lifecycleVersion = '2.2.0'
+    materialVersion = '1.2.1'
+    roomVersion = '2.2.5'
+    // testing
+    junitVersion = '4.13.1'
+    espressoVersion = '3.1.0'
+    androidxJunitVersion = '1.1.2'
+}
 ```
 
 ## Basic
